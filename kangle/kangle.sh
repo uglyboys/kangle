@@ -39,3 +39,6 @@ sleep 3
 killall -9 kangle
 sleep 3
 $PREFIX/bin/kangle
+wget https://raw.githubusercontent.com/uglyboys/kangle/master/kangle/kangle.service -O /usr/lib/systemd/system/kangle.service
+ln -s '/usr/lib/systemd/system/kangle.service' '/etc/systemd/system/multi-user.target.wants/kangle.service'
+systemctl enable kangle.service
