@@ -1,0 +1,9 @@
+[Unit]
+Description=Kangle Web Service
+After=syslog.target network.target
+[Service]
+Type=forking
+ExecStart=/vhs/kangle/bin/kangle
+ExecStop=/vhs/kangle/bin/kangle -q
+[Install]
+WantedBy=multi-user.target
